@@ -1,5 +1,5 @@
-const signupValidate = require('.../src/signupValidate');
-const User = require('.../src/User');
+const signupValidate = require('../src/signupValidate');
+const User = require('../src/User');
 
 test("less than 18 years old", () => {
     const date = new Date()

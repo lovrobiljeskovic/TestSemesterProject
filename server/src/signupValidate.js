@@ -1,4 +1,4 @@
-const User = require('.../src/User');
+const User = require('../src/User');
 
 function validate(User){
     const pattern = /^[a-z æøå]+$/
