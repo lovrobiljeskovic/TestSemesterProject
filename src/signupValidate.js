@@ -1,7 +1,9 @@
-function validate(fname, lname, age){
+const User = require('../src/User');
+
+function validate(User){
     const pattern = /^[a-z æøå]+$/
-    return pattern.test(fname.toLowerCase()) && pattern.test(lname.toLowerCase()) 
-    && ageValidator(age);
+    return pattern.test(User.fname.toLowerCase()) && pattern.test(User.lname.toLowerCase()) 
+    && ageValidator(User.age);
 }
 
 function ageValidator(age){
