@@ -4,4 +4,4 @@ language: node_js
 node_js:
   - 10
 script:
-  - cd client && yarn test && cd ../server && yarn test
+  - cd client && yarn && yarn test && cd ../server && yarn && yarn test
