@@ -21,7 +21,3 @@ test("invalid characters used in first name", () => {
 test("invalid characters used in last name", () => {
     expect(signupValidate("Mathias", "J3p5en", "1993-27-05")).toBe(false)
 })
-
-// test("adds 1 + 2 to equal 3", () => {
-//     expect(sum(1, 2)).toBe(3);
-// })
