@@ -1,4 +1,4 @@
-function signupValidate(fname, lname, age){
+function validate(fname, lname, age){
     const pattern = /^[a-z æøå]+$/
     return pattern.test(fname.toLowerCase()) && pattern.test(lname.toLowerCase()) 
     && ageValidator(age);
@@ -11,5 +11,4 @@ function ageValidator(age){
     
     return userAge >=18  
 }
-
-module.exports = signupValidate;
+module.exports = validate;
