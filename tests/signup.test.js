@@ -1,6 +1,8 @@
+const signupValidate = require('../src/signupValidate');
+
 test("less than 18 years old", () => {
     const date = new Date()
-    expect(signupValidate("Mathias", "Jepsen", `${date.getFullYear()}-${date.getDate()}-${date.getMonth() + 1}`)).toBe(true)
+    expect(signupValidate("Mathias", "Jepsen", `${date.getFullYear()}-${date.getDate()}-${date.getMonth() + 1}`)).toBe(false)
 })
 
 test("18 years old", () => {
