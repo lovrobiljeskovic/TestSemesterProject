@@ -5,9 +5,13 @@
   "license": "MIT",
   "scripts": {
     "start": "node index.js",
-    "test": "jest"
+    "test": "jest",
+    "cucumber": "./node_modules/.bin/cucumber-js tests/features/ -r tests/steps/"
   },
   "devDependencies": {
     "jest": "^24.7.1"
+  },
+  "dependencies": {
+    "cucumber": "^5.1.0"
   }
 }
