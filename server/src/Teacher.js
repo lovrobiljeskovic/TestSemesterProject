@@ -1,12 +1,13 @@
-const User = require("../src/User")
+import User from "../src/User";
 
 class Teacher extends User {
-    constructor(fname, lname, age, didCompleteAPBC) {
-        super(fname, lname, age)
+	// eslint-disable-next-line no-unused-vars
+	constructor(fname, lname, age, didCompleteAPBC) {
+		super(fname, lname, age);
 
-        this.didCompleteAPBC = this.didCompleteAPBC
-        this.courses = []
-    }
+		this.didCompleteAPBC = this.didCompleteAPBC;
+		this.courses = [];
+	}
 }
 
-module.exports = Teacher
+export default Teacher;
