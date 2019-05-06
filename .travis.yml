@@ -2,4 +2,7 @@ language: node_js
 node_js:
   - 10
 script:
+  - yarn test -- --coverage
   - cd client && yarn && yarn test && cd ../server && yarn && yarn test:coveralls
+after_script: # Upload coverage reports
+  - COVERALLS_REPO_TOKEN=$coveralls_repo_token yarn coveralls
