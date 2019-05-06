@@ -1,7 +1,5 @@
-install:
-  - yarn
 language: node_js
 node_js:
   - 10
 script:
-  - yarn test
+  - cd client && yarn && yarn test && cd ../server && yarn && yarn test
