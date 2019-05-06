@@ -2,5 +2,5 @@ language: node_js
 node_js:
   - 10
 script:
-  - cd ../server && yarn lint
+  - cd server && yarn lint
   - cd client && yarn && yarn test && cd ../server && yarn && yarn test:coveralls && yarn cucumber
