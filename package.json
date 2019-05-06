@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "test:coveralls": "jest --coverage --coverageReporters=text-lcov | coveralls"
   },
   "author": "",
   "license": "ISC",
@@ -12,6 +13,7 @@
     "express": "^4.16.4"
   },
   "devDependencies": {
+    "coveralls": "^3.0.3",
     "jest": "^24.7.1",
     "jest-cli": "^24.7.1"
   }
