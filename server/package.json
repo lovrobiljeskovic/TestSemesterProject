@@ -7,12 +7,13 @@
     "start": "node -r esm index.js",
     "test": "jest",
     "lint": "./node_modules/.bin/eslint . ./**/*.js --fix",
-    "cucumber": "./node_modules/.bin/cucumber-js tests/features/ -r tests/steps/",
+    "cucumber": "./node_modules/.bin/cucumber-js --require-module @babel/register tests/features/ -r tests/steps/",
     "test:coveralls": "jest --coverage --coverageReporters=text-lcov | coveralls"
   },
   "devDependencies": {
     "@babel/core": "^7.4.4",
     "@babel/preset-env": "^7.4.4",
+    "@babel/register": "^7.4.4",
     "babel-jest": "^24.8.0",
     "coveralls": "^3.0.3",
     "jest": "^24.7.1"
