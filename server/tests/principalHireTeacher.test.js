@@ -12,7 +12,7 @@ test("adds Teacher to the teacher registry", () => {
 
 test("fails to add Teacher to the teacher registry without a first name", () => {
     const principal = new Principal("Mathias", "Jepsen", new Date())
-    expect(principal.hireTeacher(teacherRegistry, new Teacher(" ", "Biljeskovic", 10, false))).toBe(false)
+    expect(principal.hireTeacher(teacherRegistry, new Teacher("", "Biljeskovic", 10, false))).toBe(false)
 })
 
 test("fails to add Teacher to the teacher registry without a first name", () => {
