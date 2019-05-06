@@ -6,6 +6,7 @@
   "scripts": {
     "start": "node index.js",
     "test": "jest",
+    "lint": "./node_modules/.bin/eslint **/*.js",
     "cucumber": "./node_modules/.bin/cucumber-js tests/features/ -r tests/steps/",
     "test:coveralls": "jest --coverage --coverageReporters=text-lcov | coveralls"
   },
@@ -14,6 +15,8 @@
     "jest": "^24.7.1"
   },
   "dependencies": {
-    "cucumber": "^5.1.0"
+    "cucumber": "^5.1.0",
+    "eslint": "^5.16.0",
+    "eslint-plugin-react": "^7.13.0"
   }
 }
