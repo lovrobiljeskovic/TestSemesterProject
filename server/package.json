@@ -6,9 +6,11 @@
   "scripts": {
     "start": "node index.js",
     "test": "jest",
-    "cucumber": "./node_modules/.bin/cucumber-js tests/features/ -r tests/steps/"
+    "cucumber": "./node_modules/.bin/cucumber-js tests/features/ -r tests/steps/",
+    "test:coveralls": "jest --coverage --coverageReporters=text-lcov | coveralls"
   },
   "devDependencies": {
+    "coveralls": "^3.0.3",
     "jest": "^24.7.1"
   },
   "dependencies": {
