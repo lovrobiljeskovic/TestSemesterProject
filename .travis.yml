@@ -9,4 +9,4 @@ before_script:
   - sleep 3 # give xvfb some time to start
   - cd client && yarn && nohup bash -c 'yarn start' &
 script:
-  - yarn wdio && cd ../server && yarn && yarn lint && yarn test:coveralls && yarn cucumber
+  - cd client && yarn && yarn wdio && cd ../server && yarn && yarn lint && yarn test:coveralls && yarn cucumber
