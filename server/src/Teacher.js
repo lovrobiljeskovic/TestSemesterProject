@@ -1,13 +1,11 @@
-import User from "../src/User";
+import User from "../src/User"
 
-class Teacher extends User {
-	// eslint-disable-next-line no-unused-vars
+export default class Teacher extends User {
 	constructor(fname, lname, age, didCompleteAPBC) {
-		super(fname, lname, age);
+		super(fname, lname, age)
 
-		this.didCompleteAPBC = this.didCompleteAPBC;
-		this.courses = [];
+		this.didCompleteAPBC = this.didCompleteAPBC
+		this.courses = []
 	}
 }
 
-export default Teacher;

@@ -74,8 +74,9 @@ const MessageBox = (props) => {
     const { onLogin, successfullySubmitted } = props
 
     return (
-        <div style={{ marginTop: "8px", display: "flex", width: "100%", height: "48px", boxShadow: "inset -1px -1px 3px 0px rgba(0,0,0,0.3)", background: successfullySubmitted ? "lightgreen" : "crimson", justifyContent: "center", alignItems: "center" }}>
-            <h4 style={{ color: successfullySubmitted ? "honeydew" : "black" }}>{onLogin
+        <div id="messageBox" style={{ marginTop: "8px", display: "flex", width: "100%", height: "48px", boxShadow: "inset -1px -1px 3px 0px rgba(0,0,0,0.3)", background: successfullySubmitted ? "lightgreen" : "crimson", justifyContent: "center", alignItems: "center" }}>
+            <h4 id="messageBoxText" style={{ color: successfullySubmitted ? "honeydew" : "black" }}>
+            {onLogin
                 ? (successfullySubmitted ? "Successfully logged in" : "Failed to log in")
                 : (successfullySubmitted ? "Successfully signed up" : "Failed to sign up")
             }

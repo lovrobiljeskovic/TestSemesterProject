@@ -19,9 +19,12 @@
     "jest": "^24.7.1"
   },
   "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
     "cucumber": "^5.1.0",
     "eslint": "^5.16.0",
     "eslint-plugin-react": "^7.13.0",
-    "esm": "^3.2.22"
+    "esm": "^3.2.22",
+    "express": "^4.16.4"
   }
 }

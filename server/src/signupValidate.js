@@ -1,4 +1,4 @@
-function validate(user){
+export default function validate(user){
 	const pattern = /^[a-z æøå]+$/;
 	return pattern.test(user.fname.toLowerCase()) && pattern.test(user.lname.toLowerCase())
     && ageValidator(user.age);
@@ -11,4 +11,3 @@ function ageValidator(age){
 
 	return userAge >=18;
 }
-export default validate;

@@ -1,5 +1,11 @@
 language: node_js
 node_js:
   - 10
+addons:
+  chrome: stable
+before_install:
+  - "export DISPLAY=:99.0"
+  - "sh -e /etc/init.d/xvfb start"
+  - sleep 3 # give xvfb some time to start
 script:
-  - cd client && yarn && yarn test && cd ../server && yarn && yarn lint && yarn test:coveralls && yarn cucumber
+  - cd client && yarn && yarn test && cd ../server && yarn && yarn lint && yarn test:coveralls && yarn cucumber && cd ../client && yarn wdio

@@ -1,7 +1,7 @@
-const express = require("express")
+import express from "express"
+import signupValidate from "../src/signupValidate"
+import User from "../src/User"
 const router = express.Router()
-const signupValidate = require("../src/signupValidate")
-const User = require("../src/User")
 
 router.get("/signup", (req, res, next) => {
     const userJson = req.query

@@ -4,18 +4,20 @@
   "private": true,
   "dependencies": {
     "axios": "^0.18.0",
+    "chai": "^4.2.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-router": "^5.0.0",
     "react-router-dom": "^5.0.0",
     "react-scripts": "3.0.0",
-    "webdriverio": "^5.8.1"
+    "wdio-selenium-standalone-service": "^0.0.12"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "CI=true react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "wdio": "wdio"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -36,8 +38,10 @@
     "@babel/core": "^7.4.4",
     "@babel/preset-env": "^7.4.4",
     "@babel/preset-react": "^7.0.0",
-    "babel-jest": "^24.7.1",
-    "jest": "^24.7.1",
-    "react-test-renderer": "^16.8.6"
+    "babel-jest": "^24.8.0",
+    "jest": "^24.8.0",
+    "react-test-renderer": "^16.8.6",
+    "wdio-mocha-framework": "^0.6.4",
+    "webdriverio": "^4.12.0"
   }
 }
