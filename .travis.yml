@@ -7,4 +7,4 @@ before_install:
  - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
  - cd client && yarn && nohup bash -c 'yarn start' &
 script:
- - cd client && yarn && yarn wdio && cd ../server && yarn && yarn lint && yarn test:coveralls && yarn cucumber
+ - echo $(pwd) && cd client && yarn && yarn wdio && cd ../server && yarn && yarn lint && yarn test:coveralls && yarn cucumber

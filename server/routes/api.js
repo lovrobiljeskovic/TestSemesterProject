@@ -8,7 +8,7 @@ router.get("/signup", (req, res, next) => {
     const user = new User(userJson.firstname, userJson.lastname, userJson.birthday)
     res.send(signupValidate(user))
 })
-//
+
 router.get("/login", (req, res, next) => {
     const verifiedUser = { username: "MathiasJepsen", password: "1234" }
     const credentials = req.query
