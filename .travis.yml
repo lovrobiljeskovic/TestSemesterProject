@@ -4,7 +4,8 @@ node_js:
 addons:
   chrome: stable
 before_install:
+ - yarn -V
  - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
- - cd client && yarn --network-concurrency 1 && nohup bash -c 'yarn start' &
+ - cd client && yarn && nohup bash -c 'yarn start' &
 script:
- - cd client && yarn --network-concurrency 1 && yarn wdio && cd ../server && yarn --network-concurrency 1 && yarn lint && yarn test:coveralls && yarn cucumber
+ - cd client && yarn && yarn wdio && cd ../server && yarn && yarn lint && yarn test:coveralls && yarn cucumber
