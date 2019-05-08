@@ -6,7 +6,7 @@ describe("Testing the Login component", () => {
 
         browser.setValue("#username", "MathiasJepsen")
         browser.setValue("#password", "1234")
-
+        //
         const usernameText = $("#username").getValue()
         const passwordText = $("#password").getValue()
 
