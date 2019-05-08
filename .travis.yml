@@ -3,9 +3,10 @@ node_js:
   - 10
 addons:
   chrome: stable
-before_install:
+before_script:
+  - "cd client && yarn"
   - "export DISPLAY=:99.0"
   - "sh -e /etc/init.d/xvfb start"
   - sleep 3 # give xvfb some time to start
 script:
-  - cd client && yarn && yarn wdio && cd ../server && yarn && yarn lint && yarn test:coveralls && yarn cucumber
+  - yarn wdio && cd ../server && yarn && yarn lint && yarn test:coveralls && yarn cucumber
