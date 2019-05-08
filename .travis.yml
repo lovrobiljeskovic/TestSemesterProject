@@ -4,6 +4,7 @@ node_js:
 addons:
   chrome: stable
 before_install:
-  - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost:3000 &
+ - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
+ - cd client && yarn && yarn start
 script:
-  - cd client && yarn && yarn wdio && cd ../server && yarn && yarn lint && yarn test:coveralls && yarn cucumber
+  - yarn wdio && cd ../server && yarn && yarn lint && yarn test:coveralls && yarn cucumber
