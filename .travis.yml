@@ -1,8 +1,5 @@
 language: node_js
 node_js:
   - 10
-addons:
-  chrome: stable
 script:
-  - cd client && yarn && nohup bash -c 'yarn start' &
-  - cd client && yarn && yarn wdio && cd ../server && yarn && yarn lint && yarn test:coveralls && yarn cucumber
+  - cd server && yarn && yarn lint && yarn test:coveralls && yarn cucumber
