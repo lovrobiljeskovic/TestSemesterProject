@@ -3,8 +3,7 @@ node_js:
   - 10
 addons:
   chrome: stable
-before_install:
- - yarn -V
+before_script:
  - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
  - cd client && yarn && nohup bash -c 'yarn start' &
 script:
