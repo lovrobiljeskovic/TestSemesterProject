@@ -5,4 +5,4 @@ addons:
   chrome: stable
 script:
   - cd client && yarn && nohup bash -c 'yarn start' &
-  - echo $(pwd) && yarn wdio && cd ../server && yarn && yarn lint && yarn test:coveralls && yarn cucumber
+  - cd client && yarn && yarn wdio && cd ../server && yarn && yarn lint && yarn test:coveralls && yarn cucumber
