@@ -3,7 +3,5 @@ node_js:
   - 10
 addons:
   chrome: stable
-before_install:
-  - cd client && yarn && nohup bash -c 'yarn start' &
 script:
-  - cd client && yarn && yarn wdio && cd ../server && yarn && yarn lint && yarn test:coveralls && yarn cucumber
+  - cd client && yarn && nohup bash -c 'yarn start' & && yarn wdio && cd ../server && yarn && yarn lint && yarn test:coveralls && yarn cucumber
