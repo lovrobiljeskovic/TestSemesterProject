@@ -32,7 +32,7 @@
             "double"
         ],
         "semi": [
-            "1",
+            "error",
             "always"
         ]
     }
