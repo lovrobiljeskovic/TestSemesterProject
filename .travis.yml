@@ -22,7 +22,7 @@ script:
   # run things
   #- cd "$TRAVIS_BUILD_DIR"/server && yarn && yarn lint && yarn test:coveralls && yarn cucumber
   - cd "$TRAVIS_BUILD_DIR"/server && yarn start &
-  - SKIP_PREFLIGHT_CHECK=true cd "$TRAVIS_BUILD_DIR"/client && yarn start &
+  - cd "$TRAVIS_BUILD_DIR"/client && SKIP_PREFLIGHT_CHECK=true yarn start &
   - $TRAVIS_BUILD_DIR/scripts/wait_for_service.sh localhost 3000 && $TRAVIS_BUILD_DIR/scripts/wait_for_service.sh localhost 8000 # wait for things
   - cd "$TRAVIS_BUILD_DIR/client" && yarn wdio # run selenium
   - kill %1 %2 # kill things
