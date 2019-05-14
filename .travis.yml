@@ -20,7 +20,7 @@ script:
   - cd "$TRAVIS_BUILD_DIR"/server && yarn
   - cd "$TRAVIS_BUILD_DIR"/client && yarn
   # run things
-  #- cd "$TRAVIS_BUILD_DIR"/server && yarn && yarn lint && yarn test:coveralls && yarn cucumber
+  - cd "$TRAVIS_BUILD_DIR"/server && yarn && yarn lint && yarn test:coveralls && yarn cucumber
   - cd "$TRAVIS_BUILD_DIR"/server && yarn start &
   - cd "$TRAVIS_BUILD_DIR"/client && SKIP_PREFLIGHT_CHECK=true yarn start &
   - $TRAVIS_BUILD_DIR/scripts/wait_for_service.sh localhost 3000 && $TRAVIS_BUILD_DIR/scripts/wait_for_service.sh localhost 8000 # wait for things
