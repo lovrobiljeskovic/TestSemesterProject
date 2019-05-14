@@ -3,10 +3,10 @@ cache:
   directories: 
     - $HOME/server/node_modules
     - $HOME/client/node_modules
-    - $HOME/.travis/.cache
+    - $HOME/travis/.cache
 
 before_install:
-  - apt-get install -y netcat
+  - sudo apt-get install -y netcat
 node_js:
   - 10
 script:
