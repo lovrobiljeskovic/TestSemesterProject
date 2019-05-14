@@ -11,6 +11,7 @@ before_install:
 node_js:
   - 10
 script:
+  - chmod ugo+x $TRAVIS_BUILD_DIR/scripts/wait_for_service.sh
   # install dependencies
   - cd "$TRAVIS_BUILD_DIR"/server && yarn
   - cd "$TRAVIS_BUILD_DIR"/client && yarn
