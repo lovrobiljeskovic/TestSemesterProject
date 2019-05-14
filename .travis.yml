@@ -8,9 +8,13 @@ cache:
 node_js:
   - 10
 script:
+  # install dependencies
+  - cd server && yarn
+  - cd client && yarn
+  # run things
   #- cd server && yarn && yarn lint && yarn test:coveralls && yarn cucumber
-  - cd server && yarn && yarn start &
-  - cd client && yarn && yarn start &
-  - nc -zw 60 localhost 3000 && nc -zw 60 localhost 8000
-  - cd client && yarn && yarn wdio
-  - kill %1 %2
+  - cd server && yarn start &
+  - cd client && yarn start &
+  - nc -zw 60 localhost 3000 && nc -zw 60 localhost 8000 # wait for things
+  - cd client && yarn wdio # run selenium
+  - kill %1 %2 # kill things
