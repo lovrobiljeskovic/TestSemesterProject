@@ -39,7 +39,7 @@ describe("Testing the Login component", () => {
         browser.setValue("#password", "1234")
         browser.setValue("#firstname", "Mathias")
         browser.setValue("#lastname", "Jepsen")
-        browser.setValue("#birthday", "27051993")
+        browser.setValue("#birthday", new Date("1993-05-27").toLocaleDateString())
 
         const usernameText = $("#username").getValue()
         const passwordText = $("#password").getValue()
