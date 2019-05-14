@@ -11,12 +11,12 @@ node_js:
   - 10
 script:
   # install dependencies
-  - cd $HOME/server && yarn
-  - cd $HOME/client && yarn
+  - cd "$HOME"/server && yarn
+  - cd "$HOME"/client && yarn
   # run things
-  #- cd $HOME/server && yarn && yarn lint && yarn test:coveralls && yarn cucumber
-  - cd $HOME/server && yarn start &
-  - cd $HOME/client && yarn start &
-  - nc -zw 60 localhost 3000 && nc -zw 60 localhost 8000 # wait for things
+  #- cd "$HOME"/server && yarn && yarn lint && yarn test:coveralls && yarn cucumber
+  - cd "$HOME"/server && yarn start &
+  - cd "$HOME"/client && yarn start &
+  - nc -zvw 60 localhost 3000 && nc -zvw 60 localhost 8000 # wait for things
   - cd $HOME/client && yarn wdio # run selenium
   - kill %1 %2 # kill things
