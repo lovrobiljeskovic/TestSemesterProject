@@ -15,6 +15,7 @@ until nc -z "$ip" "$port"; do
     sleep 1
     count=$((count+1))
     if [ "$count" -eq "$max" ]; then 
+        exit 1
         break;
     fi
 done
