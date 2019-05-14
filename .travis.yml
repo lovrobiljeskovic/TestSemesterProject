@@ -7,6 +7,7 @@ cache:
 
 before_install:
   - sudo apt-get install -y netcat
+  - ls -l $HOME/scripts
 node_js:
   - 10
 script:
@@ -17,6 +18,6 @@ script:
   #- cd "$HOME"/server && yarn && yarn lint && yarn test:coveralls && yarn cucumber
   - cd "$HOME"/server && yarn start &
   - cd "$HOME"/client && yarn start &
-  - $HOME/wait_for_service.sh localhost 3000 && $HOME/wait_for_service.sh localhost 8000 # wait for things
+  - $HOME/scripts/wait_for_service.sh localhost 3000 && $HOME/scripts/wait_for_service.sh localhost 8000 # wait for things
   - cd "$HOME/client" && yarn wdio # run selenium
   - kill %1 %2 # kill things

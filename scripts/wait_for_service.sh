@@ -1,5 +1,5 @@
 #!/bin/sh
-
+set -ev
 ip="$1"
 port="$2"
 max=60
