@@ -9,9 +9,7 @@ before_install:
   - sudo apt-get install -y netcat
   - ls -l $TRAVIS_BUILD_DIR/scripts
     # download and install chrome
-  - wget "https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb" \
-    && dpkg -i --force-depends google-chrome-stable_current_amd64.deb \
-    && rm google-chrome-stable_current_amd64.deb
+  - wget "https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb" && dpkg -i --force-depends google-chrome-stable_current_amd64.deb && rm google-chrome-stable_current_amd64.deb
 
 
 node_js:
