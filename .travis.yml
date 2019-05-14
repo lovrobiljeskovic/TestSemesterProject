@@ -17,6 +17,6 @@ script:
   #- cd "$HOME"/server && yarn && yarn lint && yarn test:coveralls && yarn cucumber
   - cd "$HOME"/server && yarn start &
   - cd "$HOME"/client && yarn start &
-  - nc -zvw 60 localhost 3000 && nc -zvw 60 localhost 8000 # wait for things
-  - cd $HOME/client && yarn wdio # run selenium
+  - $HOME/wait_for_service.sh localhost 3000 && $HOME/wait_for_service.sh localhost 8000 # wait for things
+  - cd "$HOME/client" && yarn wdio # run selenium
   - kill %1 %2 # kill things
