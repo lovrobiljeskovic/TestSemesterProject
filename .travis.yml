@@ -3,6 +3,7 @@ cache:
   directories: 
     - $HOME/server/node_modules
     - $HOME/client/node_modules
+    - $HOME/.travis/.cache
 
 node_js:
   - 10
@@ -10,6 +11,6 @@ script:
   #- cd server && yarn && yarn lint && yarn test:coveralls && yarn cucumber
   - cd server && yarn && yarn start &
   - cd client && yarn && yarn start &
+  - nc -zw 60 localhost 3000 && nc -zw 60 localhost 8000
   - cd client && yarn && yarn wdio
-  - nc -w 60 localhost 3000 && nc -w 60 localhost 8000
   - kill %1 %2
