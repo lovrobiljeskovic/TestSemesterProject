@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import Teacher from '../src/Teacher'
 import Course from '../src/Course'
 import votingSystem from '../src/votingSystem';
