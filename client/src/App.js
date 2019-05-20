@@ -7,7 +7,6 @@ function App() {
         <div>
             <Switch>
                 <Route exact path="/" component={Login}/>
-                <Route excat path="/Admin" component={Admin}/>
             </Switch>
         </div>
     )
