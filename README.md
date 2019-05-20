@@ -15,9 +15,9 @@ The boundry analysis for teachers who can vote on the course depending on their 
 #Decision Table
 
 
-| Condition  | | | | | | | | |
+| Condition  | | | | ||
 | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
-| has the teacher voted | F| | T| | T| | F| | F| 
-| number of teaching hours |19| | 19| | 25| | 30| | 10|
-| is teacher allowed to vote| F| | F| | T| | T| | F|
+| has the teacher voted | F | T | T | F| F | 
+| number of teaching hours |19| 19| 25| 30| 10|
+| is teacher allowed to vote| F| F| T| T| F|
 
