@@ -21,3 +21,5 @@ The boundry analysis for teachers who can vote on the course depending on their 
 | number of teaching hours |19| | 19| | 25| | 30| | 10|
 | is teacher allowed to vote| F| | F| | T| | T| | F|
 
+We didn't test all the conditions because they are redundant and we used equivalence partitioning
+

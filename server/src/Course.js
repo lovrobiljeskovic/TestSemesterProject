@@ -7,7 +7,7 @@ export default class Course {
     }
 
     vote(teacher) {
-        if(this.votes.includes(teacher)) {
+        if(this.votes.find(t => t.fname === teacher.fname)) {
             return false
         }
         this.votes.push(teacher)
