@@ -9,7 +9,7 @@ let validationDidPass
 Given("the user is {int} years old", function(age) {
 	const date = new Date()
 	const userAge = `${date.getFullYear() - age}-${date.getDate()}-${date.getMonth() + 1}`
-	user = new User("Mathias", "Jepsen", userAge)
+	user = new User("Mathias", "Jepsen", userAge, "username", "password")
 })
 
 When("the user tries to sign up", function() {
