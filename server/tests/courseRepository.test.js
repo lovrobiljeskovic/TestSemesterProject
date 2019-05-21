@@ -1,27 +1,27 @@
-
+/* eslint-disable no-undef */
 import CourseRepository from "../src/CourseRepository"
-import {reset} from "../src/Database";
+import {reset} from "../src/Database"
 import Course from "../src/Course"
 
-let repo;
+let repo
 
 beforeEach(() => {
-    repo = new CourseRepository();
+	repo = new CourseRepository()
 })
 afterEach(() => {
-    reset();
-});
+	reset()
+})
 
 
 test("inserts and returns all courses", () => {
-    repo.insert(new Course())
-    expect(repo.get()).toHaveLength(1);
-});
+	repo.insert(new Course())
+	expect(repo.get()).toHaveLength(1)
+})
 
 test("returns can find course by name", () => {
-    let course = new Course("This is what I'm looking for");
-    repo.insert(course);
-    repo.insert(new Course("This isn't what I'm looking for"))
+	let course = new Course("This is what I'm looking for")
+	repo.insert(course)
+	repo.insert(new Course("This isn't what I'm looking for"))
     
-    expect(repo.getBy({name: course.name})).toEqual(course);
-});
+	expect(repo.getBy({name: course.name})).toEqual(course)
+})
