@@ -5,33 +5,53 @@ import User from "../src/User"
 test("less than 18 years old", () => {
 	const date = new Date()
 	var age = `${date.getFullYear()}-${date.getDate()}-${date.getMonth() + 1}`
-	const user = new User("Mathias","Jepsen",age)
+	const user = new User("Mathias","Jepsen",age, 'username', 'password')
 	expect(signupValidate(user)).toBe(false)
 })
 
 test("18 years old", () => {
 	const date = new Date()
 	let age = `${date.getFullYear() - 18}-${date.getDate()}-${date.getMonth() + 1}`
-	const user = new User("Mathias","Jepsen",age)
+	const user = new User("Mathias","Jepsen",age, 'username', 'password')
 	expect(signupValidate(user)).toBe(true)
 })
 
 test("older than 18 years old", () => {
-	const user = new User("Mathias","Jepsen","1993-27-05")
+	const user = new User("Mathias","Jepsen","1993-27-05", 'username', 'password')
 	expect(signupValidate(user)).toBe(true)
 })
 
 test("invalid characters used in first name", () => {
-	const user = new User("M4th1as","Jepsen","1993-27-05")
+	const user = new User("M4th1as","Jepsen","1993-27-05", 'username', 'password')
 	expect(signupValidate(user)).toBe(false)
 })
 
 test("invalid characters used in last name", () => {
-	const user = new User("Mathias","J3p5en","1993-27-05")
+	const user = new User("Mathias","J3p5en","1993-27-05", 'username', 'password')
 	expect(signupValidate(user)).toBe(false)
 })
 
 test("invalid characters used in first and last name", () => {
-	const user = new User("M4th1as","J3p5en","1993-27-05")
+	const user = new User("M4th1as","J3p5en","1993-27-05", 'username', 'password')
+	expect(signupValidate(user)).toBe(false)
+})
+
+test("no password", () => {
+	const user = new User("M4th1as","J3p5en","1993-27-05", 'username', 'password')
+	expect(signupValidate(user)).toBe(false)
+})
+
+test("no username", () => {
+	const user = new User("M4th1as","J3p5en","1993-27-05", 'username', 'password')
+	expect(signupValidate(user)).toBe(false)
+})
+
+test("invalid characters in username", () => {
+	const user = new User("M4th1as","J3p5en","1993-27-05", "Eh..")
+	expect(signupValidate(user)).toBe(false)
+})
+
+test("valid user", () => {
+	const user = new User("M4th1as","J3p5en","1993-27-05", "MrGuy", "pass")
 	expect(signupValidate(user)).toBe(false)
 })

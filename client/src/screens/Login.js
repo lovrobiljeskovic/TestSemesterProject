@@ -1,8 +1,7 @@
 import React from "react"
 import LoginForm from "../components/LoginForm"
 import SignupForm from "../components/SignupForm"
-
-const api = require("axios").create({ baseURL: "http://localhost:8000/api" })
+import api from '../api'
 
 class Login extends React.Component {
     constructor(props) {
@@ -32,11 +31,11 @@ class Login extends React.Component {
         })
     }
 
-    onSubmitButtonClicked = () => {
+    onSubmitButtonClicked = (context) => {
         const { onLogin, username, password, firstname, lastname, birthday } = this.state
 
         const loginParams = { username, password }
-        const signupParams = { firstname, lastname, birthday }
+        const signupParams = { username, password, firstname, lastname, birthday }
 
         api.get(onLogin ? "/login" : "/signup", {
             params: onLogin ? loginParams : signupParams
