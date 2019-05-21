@@ -10,7 +10,7 @@ const router = express.Router()
 const userRepo = new UserRepository()
 const courseRepo = new CourseRepository()
 userRepo.insert(new User("testname", "testlname", "1990-01-01", "user", "pass"))
-userRepo.insert(new User("MathiasJepsen", "1234"))
+userRepo.insert(new User("testname", "testlname2", "1990-12-12", "MathiasJepsen", "1234"))
 courseRepo.insert(new Course("test course", 20, "now"))
 
 router.get("/signup", (req, res) => {
