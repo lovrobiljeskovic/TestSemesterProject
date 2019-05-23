@@ -28,14 +28,14 @@ The boundry analysis for teachers who can vote on the course depending on their 
 
 We didn't test all the conditions because they are redundant and we used equivalence partitioning
 
-##Report
+## Report
 
 		 	 	 							
 **Team collaboration**
 						
 We have used tools from agile development to communicate to all team members. We have used tools such as User stories, tasks and sprints. Furthermore we had a stand up meeting each time we meet and worked on the project. This made it easy for us to have good overview of what we had achieved so far and what was missing .
-	
-    					
+
+
 **Test automation strategy**
 						
 We have decided to use Travis because we deemed it as the best CI/CD chain for JS. Since we had implemented our backend in express and our frontend in react, it was really easy to add our
