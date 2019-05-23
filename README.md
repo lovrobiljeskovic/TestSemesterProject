@@ -1,8 +1,7 @@
 # TestSemesterProject
 
-Coveralls markdown:
-[![Coverage Status](https://coveralls.io/repos/github/lovrobiljeskovic/TestSemesterProject/badge.svg?branch=lovro/testcoverage)](https://coveralls.io/github/lovrobiljeskovic/TestSemesterProject?branch=lovro/testcoverage)
-
+[![Coverage Status](https://coveralls.io/repos/github/lovrobiljeskovic/TestSemesterProject/badge.svg)](https://coveralls.io/github/lovrobiljeskovic/TestSemesterProject)
+[![Build Status](https://travis-ci.com/lovrobiljeskovic/TestSemesterProject.svg?branch=master)](https://travis-ci.com/lovrobiljeskovic/TestSemesterProject)
 
 ## Links
 
